@@ -423,6 +423,7 @@ impl<T: 'static> EventLoop<T> {
                                 location,
                                 id: pointer.pointer_id() as u64,
                                 force: Some(Force::Normalized(pointer.pressure() as f64)),
+                                pen_state: None,
                             }),
                         };
                         callback(event, self.window_target());
